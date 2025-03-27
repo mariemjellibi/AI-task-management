@@ -1,0 +1,22 @@
+* redux est une bibliothèque de gestion d'etat entre les composantes 
+*concepte: organiser et centraliser l'eata de l'application en un seul endroit :quies t le store
+*les 3 conceptes clées de Redux sont:
+le store : l'endroit ou sont stockées toutes les donn""s globale 
+actions: ce sont des missage qui disent "je veux modifier cette etat"
+reducers ce sonts des fonction qui modifient l'état en fonction des actions 
+* comment ça marche en 4 etapes:
+u n composant envoie une action 
+cette action est transmisse au reducersaui décidecomment mettre a jour l'étatle store met à jour l'etat
+1 créattion du store:
+import {configureStore) from '@reduxjs/toolkit';
+ilort counterRouter from                
+export const store = configureStore({
+    reducer:{
+        counter: counterReducer,
+
+    }
+}) 
+useSelector((sate)=>state.(the nameof the state).value) ;
+dispatch:utilisé our envoyer une action au reducer
+reducer est une fonction qui prend en parametre l'état et une action et renvoie un nouvel état
+slice : manière d'organiser et gere l'etat est ses actions et son reducerskice = etat initiale +les actions + le reducer qui met a jour l'etat 
